@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description"></p>
+    <form action="" id="survey-form">
+      <label for="name" id="name-label"
+        >Name:
+        <input type="text" id="name" title="name" placeholder="Name" required />
+      </label>
+      <label for="email" id="email-label"
+        >Email:
+        <input
+          type="email"
+          id="email"
+          title="email"
+          placeholder="Email"
+          required
+        />
+      </label>
+      <label for="number" id="number-label"
+        >Overall Rating:
+        <input
+          type="number"
+          id="number"
+          title="number"
+          placeholder="1-10"
+          min="1"
+          max="10"
+        />
+      </label>
+      <label for="select" id="education"
+        >Education
+        <select name="select" id="dropdown" title="select">
+          <option value="">select one</option>
+          <option value="1">Self Taught</option>
+          <option value="2">Boot Camp</option>
+          <option value="3">Degree Program</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+      <label for="recommendation">
+        <input type="radio" name="recommendation" class="inline" />I recommend
+        this course
+      </label>
+      <label for="recommendation">
+        <input type="radio" name="recommendation" class="inline" />I do not
+        recommend this course
+      </label>
+      <label for="features"
+        >Favorite parts of the course:
+        <input type="checkbox" value="easy" />Easy to understand
+        <input type="checkbox" value="value" />Great value
+        <input type="checkbox" value="short" />Short lessons
+      </label>
+      <textarea
+        name="comments"
+        id="comments"
+        cols="30"
+        rows="3"
+        placeholder="Comments"
+      ></textarea>
+    </form>
+  </body>
+</html>
