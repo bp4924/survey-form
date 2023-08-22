@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1 id="title">Survey Form</h1>
-    <p id="description"></p>
+    <p id="description">Please let us know how we did</p>
     <form action="" id="survey-form">
       <label for="name" id="name-label"
         >Name:
@@ -24,6 +24,17 @@
           required
         />
       </label>
+      <label for="select" id="education"
+        >Education:
+        <select name="select" id="dropdown" title="select">
+          <option value="">select one</option>
+          <option value="1">Self Taught</option>
+          <option value="2">Boot Camp</option>
+          <option value="3">Degree Program</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+      <p class="separator"></p>
       <label for="number" id="number-label"
         >Overall Rating:
         <input
@@ -35,37 +46,42 @@
           max="10"
         />
       </label>
-      <label for="select" id="education"
-        >Education
-        <select name="select" id="dropdown" title="select">
-          <option value="">select one</option>
-          <option value="1">Self Taught</option>
-          <option value="2">Boot Camp</option>
-          <option value="3">Degree Program</option>
-          <option value="4">Other</option>
-        </select>
-      </label>
-      <label for="recommendation">
-        <input type="radio" name="recommendation" class="inline" />I recommend
-        this course
-      </label>
-      <label for="recommendation">
-        <input type="radio" name="recommendation" class="inline" />I do not
-        recommend this course
-      </label>
-      <label for="features"
+      <fieldset>
+        <label for="recommendation">
+          <input type="radio" name="recommendation" class="inline" /> I
+          recommend this course
+        </label>
+        <label for="recommendation">
+          <input type="radio" name="recommendation" class="inline" /> I do not
+          recommend this course
+        </label>
+      </fieldset>
+
+      <p class="separator"></p>
+      <label for="features" class="favorite-features"
         >Favorite parts of the course:
-        <input type="checkbox" value="easy" />Easy to understand
-        <input type="checkbox" value="value" />Great value
-        <input type="checkbox" value="short" />Short lessons
+        <label for="easy" class="features-list">
+          <input type="checkbox" value="easy" class="features" /> Easy to
+          understand
+        </label>
+        <label for="value" class="features-list">
+          <input type="checkbox" value="value" class="features" /> Great value
+        </label>
+        <label for="short" class="features-list">
+          <input type="checkbox" value="short" class="features" /> Short lessons
+        </label>
       </label>
-      <textarea
-        name="comments"
-        id="comments"
-        cols="30"
-        rows="3"
-        placeholder="Comments"
-      ></textarea>
+      <label for="comments">
+        <textarea
+          name="comments"
+          id="comments"
+          cols="30"
+          rows="3"
+          placeholder="Comments"
+        ></textarea>
+      </label>
+      <p class="separator"></p>
+      <input type="submit" id="submit" value="submit" />
     </form>
   </body>
 </html>
